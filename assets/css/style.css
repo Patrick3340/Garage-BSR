@@ -311,21 +311,11 @@ p:last-child { margin-bottom: 0; }
   margin-right: auto;
   flex: none;
 }
-.brand__img { height: 52px; width: auto; }
+.brand__img { height: 68px; width: auto; }
 .brand__txt { display: none; line-height: 1.1; }
-.brand__name {
-  display: block;
-  font-family: var(--display);
-  font-size: 29px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
 .brand__tag {
   display: block;
-  margin-top: 3px;
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1144,7 +1134,7 @@ p:last-child { margin-bottom: 0; }
   .ftr__grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
   .ftr__grid > div:first-child { grid-column: auto; }
 }
-.ftr__logo { height: 54px; width: auto; margin-bottom: 20px; }
+.ftr__logo { height: 78px; width: auto; margin-bottom: 22px; }
 .ftr p, .ftr address { color: var(--text-3); font-size: 15px; }
 .ftr h4 {
   font-size: 12px;
