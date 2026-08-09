@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garage BSR Inc. — Howick, QC</title>
+<meta name="description" content="Garage BSR Inc. — Bulmer Service &amp; Réparations, Howick, Québec. Choisissez votre langue / Choose your language.">
+<link rel="alternate" hreflang="fr-ca" href="fr/">
+<link rel="alternate" hreflang="en-ca" href="en/">
+<link rel="alternate" hreflang="x-default" href="fr/">
+<link rel="icon" href="assets/img/bsr-mark.png">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .gate {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 40px var(--gut);
+    position: relative;
+    overflow: hidden;
+  }
+  .gate::before {
+    content: "";
+    position: absolute;
+    top: -30%; right: -18%;
+    width: 70vw; height: 70vw;
+    max-width: 900px; max-height: 900px;
+    border-radius: 50%;
+    border: clamp(22px, 3.4vw, 46px) solid transparent;
+    border-top-color: var(--red);
+    border-right-color: var(--red);
+    opacity: .16;
+    transform: rotate(-28deg);
+  }
+  .gate > * { position: relative; }
+  .gate img { width: min(560px, 86vw); margin: 0 auto 44px; border-radius: var(--radius-lg); }
+  .gate .btn-row { justify-content: center; margin-top: 34px; }
+</style>
+</head>
+<body>
+<main class="gate">
+  <img src="assets/img/bsr-logo-900.png" alt="Garage BSR Inc. — Bulmer Service &amp; Réparations">
+  <p class="eyebrow" style="justify-content:center">39-A rue Mill, Howick, QC J0S 1G0</p>
+  <h1 class="h-md">Choisissez votre langue<br><span class="muted">Choose your language</span></h1>
+  <div class="btn-row">
+    <a class="btn" href="fr/index.html" hreflang="fr-CA">Site en français</a>
+    <a class="btn btn--ghost" href="en/index.html" hreflang="en-CA">English site</a>
+  </div>
+  <p class="muted" style="margin-top:30px;font-size:14px">
+    Redirection automatique… / Redirecting…
+  </p>
+</main>
+
+<script>
+  /* Send the visitor to their preferred language; the buttons above stay
+     available if scripting is off or the redirect is unwanted. */
+  (function () {
+    var langs = navigator.languages || [navigator.language || 'fr'];
+    var wantsEn = String(langs[0] || '').toLowerCase().indexOf('en') === 0;
+    setTimeout(function () {
+      location.replace(wantsEn ? 'en/index.html' : 'fr/index.html');
+    }, 1200);
+  })();
+</script>
+</body>
+</html>

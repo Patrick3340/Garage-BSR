@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prendre rendez-vous — Garage BSR Inc. | Howick, QC</title>
+<meta name="description" content="Réservez en ligne votre rendez-vous au Garage BSR Inc., 39-A rue Mill, Howick, QC. Choisissez la date et l’heure qui vous conviennent.">
+<link rel="canonical" href="rendez-vous.html">
+<link rel="alternate" hreflang="fr-ca" href="rendez-vous.html">
+<link rel="alternate" hreflang="en-ca" href="../en/appointment.html">
+<link rel="icon" href="../assets/img/bsr-mark.png">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu principal</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="Garage BSR Inc. — Accueil">
+      <img class="brand__img" src="../assets/img/bsr-mark.png" alt="Garage BSR Inc.">
+      <span class="brand__txt">
+        <span class="brand__name">Garage BSR</span>
+        <span class="brand__tag">Bulmer Service &amp; Réparations</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="rendez-vous.html" aria-current="page">Rendez-vous</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hdr__act">
+      <div class="lang">
+        <a href="rendez-vous.html" aria-current="true" hreflang="fr-CA">FR</a>
+        <a href="../en/appointment.html" hreflang="en-CA">EN</a>
+      </div>
+      <a class="btn btn--sm hdr__cta" href="#calendrier">Voir les disponibilités</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="rendez-vous.html">Rendez-vous</a>
+  <a href="contact.html">Contact</a>
+  <a class="btn btn--block" href="#calendrier">Voir les disponibilités</a>
+</div>
+
+<main id="main">
+
+  <section class="phead">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Fil d’Ariane">
+        <a href="index.html">Accueil</a> <span>/</span> Rendez-vous
+      </nav>
+      <h1 class="h-lg">Prendre rendez-vous</h1>
+      <hr class="rule">
+      <p class="lede" style="margin-top:28px">
+        Choisissez la date et l’heure qui vous conviennent. Vous recevrez une
+        confirmation par courriel, et un rappel avant votre visite.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== ÉTAPES ===================== -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="steps">
+        <div class="step rv">
+          <div class="step__n">1</div>
+          <h3>Choisissez un service</h3>
+          <p>Entretien, freins, pneus, diagnostic… Indiquez la raison de la visite pour qu’on réserve le bon temps d’atelier.</p>
+        </div>
+        <div class="step rv" data-d="1">
+          <div class="step__n">2</div>
+          <h3>Choisissez votre plage</h3>
+          <p>Les disponibilités affichées sont réelles et à jour. Sélectionnez la date et l’heure qui font votre affaire.</p>
+        </div>
+        <div class="step rv" data-d="2">
+          <div class="step__n">3</div>
+          <h3>Confirmez</h3>
+          <p>Vos coordonnées et les informations du véhicule, puis c’est réservé. On vous attend au 39-A rue Mill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CALENDRIER ===================== -->
+  <section class="section section--alt section--edge" id="calendrier">
+    <div class="wrap">
+      <div class="shead">
+        <div>
+          <p class="eyebrow">Disponibilités</p>
+          <h2 class="h-md">Choisissez votre plage horaire</h2>
+        </div>
+        <p class="shead__x muted">
+          Un imprévu ? Vous pouvez modifier ou annuler votre rendez-vous
+          directement depuis le courriel de confirmation.
+        </p>
+      </div>
+
+      <div class="embed">
+        <!-- Le calendrier s’insère ici (voir assets/js/booking.js) -->
+        <div id="booking-embed"></div>
+
+        <!-- Affiché tant que le calendrier n’est pas configuré -->
+        <div class="notice" id="booking-fallback" hidden>
+          <div class="notice__ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </div>
+          <h3>Réservation par téléphone</h3>
+          <p>
+            La réservation en ligne sera activée sous peu. D’ici là, appelez-nous
+            et nous vous trouverons une plage rapidement.
+          </p>
+          <div class="btn-row" style="justify-content:center">
+            <a class="btn" href="tel:+15149789413">(514) 978-9413</a>
+            <a class="btn btn--ghost" href="contact.html">Écrire un message</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INFOS PRATIQUES ===================== -->
+  <section class="section">
+    <div class="wrap grid grid--2">
+      <div class="panel">
+        <p class="panel__k">À apporter</p>
+        <h3 class="h-sm" style="margin-bottom:18px">Pour un rendez-vous efficace</h3>
+        <ul class="ticks" style="margin-top:0">
+          <li>Le certificat d’immatriculation du véhicule</li>
+          <li>Les factures d’entretien récentes, si vous les avez</li>
+          <li>Une description du bruit ou du symptôme observé</li>
+          <li>Vos clés de roue antivol, le cas échéant</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <p class="panel__k">Heures d’ouverture</p>
+        <h3 class="h-sm" style="margin-bottom:18px">Quand nous sommes à l’atelier</h3>
+        <ul class="hours">
+          <li><span class="d">Lundi – Vendredi</span> <span class="t">8 h 00 – 17 h 00</span></li>
+          <li><span class="d">Samedi</span> <span class="t">Sur rendez-vous</span></li>
+          <li><span class="d">Dimanche</span> <span class="t closed">Fermé</span></li>
+        </ul>
+        <p class="muted" style="margin-top:20px;font-size:14px">
+          Dépôt de clés possible en dehors des heures — mentionnez-le lors de la réservation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band__in">
+      <div>
+        <h2>Une urgence mécanique ?</h2>
+        <p>Un bruit inquiétant, un voyant rouge, un véhicule qui ne démarre pas — appelez-nous directement.</p>
+      </div>
+      <div><a class="btn btn--light" href="tel:+15149789413">(514) 978-9413</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <img class="ftr__logo" src="../assets/img/bsr-mark.png" alt="Garage BSR Inc.">
+        <p>Garage BSR Inc.<br>Bulmer Service &amp; Réparations<br>Mécanique générale à Howick, Québec.</p>
+        <div class="ftr__member">
+          <img src="../assets/img/unipro-logo.png" alt="Uni-Pro" width="210" height="47" loading="lazy">
+          <span>Membre UNI-PRO</span>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rendez-vous.html">Rendez-vous</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#entretien">Entretien préventif</a></li>
+          <li><a href="services.html#freins">Freins</a></li>
+          <li><a href="services.html#pneus">Pneus &amp; alignement</a></li>
+          <li><a href="services.html#diagnostic">Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <address>
+          39-A rue Mill<br>Howick, QC J0S 1G0<br><br>
+          <a href="tel:+15149789413">(514) 978-9413</a><br>
+          <a href="mailto:info@garagebsr.ca">info@garagebsr.ca</a>
+        </address>
+      </div>
+    </div>
+    <div class="ftr__btm">
+      <p>&copy; <span data-year>2026</span> Garage BSR Inc. Tous droits réservés.</p>
+      <p><a href="../en/appointment.html" hreflang="en-CA">English version</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/booking.js"></script>
+</body>
+</html>

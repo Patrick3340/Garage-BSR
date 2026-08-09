@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Tableau de bord interne — outil de suivi, non destiné au site public.
+# Le fichier reste sur votre Mac; il n'est pas publié.
+dashboard.html
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
