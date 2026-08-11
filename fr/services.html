@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -28,8 +28,8 @@
     </a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
-      <a href="services.html" aria-current="page">Services</a>
-      <a href="rendez-vous.html">Rendez-vous</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#a-propos">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr__act">
@@ -47,8 +47,8 @@
 
 <div class="drawer" id="drawer">
   <a href="index.html">Accueil</a>
-  <a href="services.html">Services</a>
-  <a href="rendez-vous.html">Rendez-vous</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#a-propos">À propos</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--block" href="rendez-vous.html">Prendre rendez-vous</a>
 </div>
@@ -79,8 +79,10 @@
         <div class="acc__item is-open" id="entretien">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="true" aria-controls="p1">
-              <span class="acc__num">01</span>
+              <span class="acc__num">ENT</span>
               <span class="acc__ttl">Entretien préventif</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -105,8 +107,10 @@
         <div class="acc__item" id="freins">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p2">
-              <span class="acc__num">02</span>
+              <span class="acc__num">FRE</span>
               <span class="acc__ttl">Système de freinage</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -131,8 +135,10 @@
         <div class="acc__item" id="pneus">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p3">
-              <span class="acc__num">03</span>
+              <span class="acc__num">PNE</span>
               <span class="acc__ttl">Pneus, roues &amp; alignement</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -157,8 +163,10 @@
         <div class="acc__item" id="suspension">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p4">
-              <span class="acc__num">04</span>
+              <span class="acc__num">SUS</span>
               <span class="acc__ttl">Suspension &amp; direction</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -183,8 +191,10 @@
         <div class="acc__item" id="diagnostic">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p5">
-              <span class="acc__num">05</span>
+              <span class="acc__num">MOT</span>
               <span class="acc__ttl">Diagnostic électronique &amp; moteur</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -209,8 +219,10 @@
         <div class="acc__item" id="transmission">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p6">
-              <span class="acc__num">06</span>
+              <span class="acc__num">TRA</span>
               <span class="acc__ttl">Transmission &amp; embrayage</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">8 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -232,8 +244,10 @@
         <div class="acc__item" id="electrique">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p7">
-              <span class="acc__num">07</span>
+              <span class="acc__num">ELE</span>
               <span class="acc__ttl">Système électrique &amp; démarrage</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">10 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -258,8 +272,10 @@
         <div class="acc__item" id="climatisation">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p8">
-              <span class="acc__num">08</span>
+              <span class="acc__num">CLI</span>
               <span class="acc__ttl">Climatisation &amp; chauffage</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">9 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -282,8 +298,10 @@
         <div class="acc__item" id="echappement">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p9">
-              <span class="acc__num">09</span>
+              <span class="acc__num">ECH</span>
               <span class="acc__ttl">Échappement</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">7 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -304,8 +322,10 @@
         <div class="acc__item" id="inspection">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p10">
-              <span class="acc__num">10</span>
+              <span class="acc__num">INS</span>
               <span class="acc__ttl">Inspections &amp; vérifications</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">8 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -331,8 +351,10 @@
         <div class="acc__item" id="saison">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p11">
-              <span class="acc__num">11</span>
+              <span class="acc__num">SAI</span>
               <span class="acc__ttl">Préparation saisonnière</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">8 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -355,8 +377,10 @@
         <div class="acc__item" id="camions">
           <h2>
             <button class="acc__btn" type="button" aria-expanded="false" aria-controls="p12">
-              <span class="acc__num">12</span>
+              <span class="acc__num">CAM</span>
               <span class="acc__ttl">Camions légers, VUS &amp; flottes</span>
+              <span class="acc__lead" aria-hidden="true"></span>
+              <span class="acc__count">16 interventions</span>
               <span class="acc__ico" aria-hidden="true"></span>
             </button>
           </h2>
@@ -397,7 +421,7 @@
         <h2>Une réparation à planifier ?</h2>
         <p>Réservez votre plage horaire en ligne, à l’heure qui vous convient.</p>
       </div>
-      <div><a class="btn btn--light" href="rendez-vous.html">Ouvrir le calendrier</a></div>
+      <div><a class="btn btn--light" href="rendez-vous.html">Prendre rendez-vous</a></div>
     </div>
   </section>
 
@@ -411,7 +435,10 @@
         <p>Garage BSR Inc.<br>Bulmer Service &amp; Réparations<br>Mécanique générale à Howick, Québec.</p>
         <div class="ftr__member">
           <img src="../assets/img/unipro-logo.png" alt="Uni-Pro" width="210" height="47" loading="lazy">
-          <span>Membre UNI-PRO</span>
+          <div class="ftr__member-txt">
+            <span class="ftr__member-lead">Fier partenaire</span>
+            <span>Membre UNI-PRO</span>
+          </div>
         </div>
       </div>
       <div>
@@ -419,7 +446,7 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="rendez-vous.html">Rendez-vous</a></li>
+          <li><a href="index.html#a-propos">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

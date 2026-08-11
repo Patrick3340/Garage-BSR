@@ -18,7 +18,7 @@
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -57,8 +57,8 @@
 
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services</a>
-      <a href="appointment.html">Appointment</a>
+      <a href="#services">Services</a>
+      <a href="#about">About us</a>
       <a href="contact.html">Contact</a>
     </nav>
 
@@ -77,8 +77,8 @@
 
 <div class="drawer" id="drawer">
   <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="appointment.html">Appointment</a>
+  <a href="#services">Services</a>
+  <a href="#about">About us</a>
   <a href="contact.html">Contact</a>
   <a class="btn btn--block" href="appointment.html">Book an appointment</a>
 </div>
@@ -88,7 +88,7 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="wrap hero__grid">
-      <div>
+      <div class="hero__copy">
         <span class="chip"><span class="dot"></span> Howick, Montérégie &middot; Quebec</span>
         <h1>
           <span class="line">The garage</span>
@@ -106,12 +106,8 @@
             Book an appointment
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="services.html">See our services</a>
+          <a class="btn btn--ghost" href="#services">See our services</a>
         </div>
-      </div>
-
-      <div class="hero__media">
-        <img src="../assets/img/bsr-logo-900.png" alt="Garage BSR Inc. logo — Bulmer Service and Repairs" width="900" height="524">
       </div>
     </div>
   </section>
@@ -166,45 +162,7 @@
       <div class="grid">
 
         <article class="card rv">
-          <div class="card__ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.1 2.1 0 0 1-3-3z"/><path d="M19.7 11.3 21 7l-2-2-4.3 1.3"/></svg>
-          </div>
-          <h3>Preventive maintenance</h3>
-          <p>The routine that prevents the emergency: oil, filters, fluids and a multi-point inspection.</p>
-          <ul class="card__list">
-            <li>Oil and filter change</li>
-            <li>Multi-point inspection</li>
-            <li>Tune-up</li>
-          </ul>
-        </article>
-
-        <article class="card rv" data-d="1">
-          <div class="card__ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
-          </div>
-          <h3>Brakes</h3>
-          <p>Pads, rotors, calipers and brake fluid — inspected and replaced when needed.</p>
-          <ul class="card__list">
-            <li>Pads and rotors</li>
-            <li>Calipers and lines</li>
-            <li>Brake fluid flush</li>
-          </ul>
-        </article>
-
-        <article class="card rv" data-d="2">
-          <div class="card__ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><path d="m12 3 1.6 4.4M21 12l-4.4 1.6M12 21l-1.6-4.4M3 12l4.4-1.6"/></svg>
-          </div>
-          <h3>Tires &amp; alignment</h3>
-          <p>Seasonal changeover, storage, balancing and wheel alignment.</p>
-          <ul class="card__list">
-            <li>Seasonal tire changeover</li>
-            <li>Tire storage</li>
-            <li>Wheel alignment</li>
-          </ul>
-        </article>
-
-        <article class="card rv">
+          <span class="card__code">ENG</span>
           <div class="card__ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.6"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg>
           </div>
@@ -215,9 +173,28 @@
             <li>Check engine / emissions light</li>
             <li>Timing belt</li>
           </ul>
+          <img class="card__img" src="../assets/img/svc-moteur.jpg"
+               alt="Mechanic working under the hood of a truck" width="900" height="562" loading="lazy">
         </article>
 
         <article class="card rv" data-d="1">
+          <span class="card__code">TRA</span>
+          <div class="card__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7v10M12 7v10M18 7v10M6 12h12"/><circle cx="6" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Transmission &amp; clutch</h3>
+          <p>Automatic or manual gearbox, clutch, differential: diagnosis and repair.</p>
+          <ul class="card__list">
+            <li>Automatic and manual transmission</li>
+            <li>Clutch replacement</li>
+            <li>Differential and 4×4 systems</li>
+          </ul>
+          <img class="card__img" src="../assets/img/svc-transmission.jpg"
+               alt="Close-up of an opened transmission" width="900" height="562" loading="lazy">
+        </article>
+
+        <article class="card rv" data-d="2">
+          <span class="card__code">SUS</span>
           <div class="card__ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.2"/></svg>
           </div>
@@ -228,19 +205,8 @@
             <li>Ball joints and control arms</li>
             <li>Steering rack</li>
           </ul>
-        </article>
-
-        <article class="card rv" data-d="2">
-          <div class="card__ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="15" height="10" rx="1.6"/><path d="M17.5 10h2.2l1.8 2.6V17h-4z"/><circle cx="7" cy="17.6" r="2"/><circle cx="17.2" cy="17.6" r="2"/></svg>
-          </div>
-          <h3>Light trucks &amp; SUVs</h3>
-          <p>Pickups, SUVs and work vehicles — we know what they ask of a shop.</p>
-          <ul class="card__list">
-            <li>Light truck servicing</li>
-            <li>Heavy-duty suspension</li>
-            <li>Fleet vehicles</li>
-          </ul>
+          <img class="card__img" src="../assets/img/svc-suspension.jpg"
+               alt="Coil-over strut, control arm and brake rotor" width="900" height="562" loading="lazy">
         </article>
 
       </div>
@@ -254,11 +220,11 @@
     </div>
   </section>
 
-  <!-- ===================== WHY US ===================== -->
-  <section class="section">
+  <!-- ===================== ABOUT US ===================== -->
+  <section class="section" id="about">
     <div class="wrap split">
       <div>
-        <p class="eyebrow">Why Garage BSR</p>
+        <p class="eyebrow">About us</p>
         <h2 class="h-md">Garage BSR, specialists<br>in engine, transmission<br>and suspension.</h2>
         <p class="lede" style="margin-top:24px">
           Engine, transmission, suspension: the heaviest repairs, and the ones
@@ -312,7 +278,7 @@
       </div>
       <div>
         <a class="btn btn--light" href="appointment.html">
-          Open the calendar
+          Book an appointment
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -334,7 +300,10 @@
         </p>
         <div class="ftr__member">
           <img src="../assets/img/unipro-logo.png" alt="Uni-Pro" width="210" height="47" loading="lazy">
-          <span>Member UNI-PRO</span>
+          <div class="ftr__member-txt">
+            <span class="ftr__member-lead">Proud partner</span>
+            <span>Member UNI-PRO</span>
+          </div>
         </div>
       </div>
 
@@ -343,7 +312,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="#about">About us</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
