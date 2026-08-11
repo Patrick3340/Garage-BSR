@@ -838,7 +838,16 @@ main[id],
 }
 .hours li:last-child { border-bottom: 0; }
 .hours dt, .hours .d { color: var(--text-2); }
-.hours .t { color: var(--text); font-family: var(--mono); font-size: 13.5px; font-weight: 500; font-variant-numeric: tabular-nums; }
+/* Weekdays carry two ranges on two lines — keep them flush right */
+.hours .t {
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13.5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  line-height: 1.5;
+}
 .hours .t.closed { color: var(--text-3); font-weight: 500; }
 
 .addr { font-style: normal; font-size: 19px; line-height: 1.55; }

@@ -38,6 +38,20 @@
   "telephone": "+1-514-978-9413",
   "email": "info@garagebsr.ca",
   "url": "./",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "13:00",
+      "closes": "17:00"
+    }
+  ],
   "priceRange": "$$"
 }
 </script>
@@ -254,8 +268,8 @@
           <div style="height:26px"></div>
           <p class="panel__k">Heures d’ouverture</p>
           <ul class="hours">
-            <li><span class="d">Lundi – Vendredi</span> <span class="t">8 h 00 – 17 h 00</span></li>
-            <li><span class="d">Samedi</span> <span class="t">Sur rendez-vous</span></li>
+            <li><span class="d">Lundi – Vendredi</span> <span class="t">8 h – 12 h<br>13 h – 17 h</span></li>
+            <li><span class="d">Samedi</span> <span class="t closed">Fermé</span></li>
             <li><span class="d">Dimanche</span> <span class="t closed">Fermé</span></li>
           </ul>
           <div class="btn-row" style="margin-top:26px">

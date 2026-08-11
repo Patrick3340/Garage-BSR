@@ -55,13 +55,14 @@ Il reste des exemples à remplacer partout (recherche-remplacement dans les 8 pa
 | À remplacer | Par |
 |---|---|
 | `info@garagebsr.ca` | votre vraie adresse courriel |
-| `8 h 00 – 17 h 00` | vos vraies heures |
 
 Déjà exacts partout :
 
 - le téléphone **(514) 978-9413** — affiché, en lien `tel:+15149789413`, et dans
   les données structurées Google ;
-- l’adresse **39-A rue Mill, Howick, QC J0S 1G0**.
+- l’adresse **39-A rue Mill, Howick, QC J0S 1G0** ;
+- les heures **lun–ven 8 h–12 h et 13 h–17 h, fermé samedi et dimanche** —
+  affichées sur quatre pages et déclarées à Google (`openingHoursSpecification`).
 
 > Le champ « Téléphone » du formulaire de contact affiche `(450) 555-0123` : c’est
 > un simple exemple de format pour le visiteur, pas votre numéro. À laisser tel quel.
