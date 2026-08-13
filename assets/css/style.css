@@ -58,6 +58,7 @@
 
   /* --- Metrics -------------------------------------------------------- */
   --wrap: 1220px;
+  --hdr-h: 96px;      /* header height; the drawer hangs off it */
   --gut: clamp(20px, 5vw, 56px);
   --radius: 0px;        /* square: nothing in a workshop is rounded */
   --radius-lg: 0px;
@@ -325,7 +326,7 @@ main[id],
   display: flex;
   align-items: center;
   gap: 30px;
-  min-height: 96px;
+  min-height: var(--hdr-h);
 }
 
 .brand {
@@ -335,7 +336,19 @@ main[id],
   margin-right: auto;
   flex: none;
 }
-.brand__img { height: 68px; width: auto; }
+.brand__img { height: 80px; width: auto; }   /* banner 2.46:1 -> ~196px wide */
+
+/* Narrow screens: the banner steps down, the bar shortens with it */
+@media (max-width: 619px) {
+  :root { --hdr-h: 74px; }
+  .hdr__in { gap: 14px; }
+  .brand__img { height: 56px; }
+}
+@media (max-width: 430px) {
+  :root { --hdr-h: 66px; }
+  .brand__img { height: 46px; }
+  .lang a { padding: 9px 11px; }
+}
 .brand__txt { display: none; line-height: 1.1; }
 /* Set in the display face, like the section headings — not the mono data layer */
 .brand__tag {
@@ -349,7 +362,9 @@ main[id],
   color: var(--text-3);
   white-space: nowrap;
 }
-@media (min-width: 620px) { .brand__txt { display: block; } }
+/* The banner is ~196px wide, so the tagline only fits alongside it from
+   here up — at 620px the two together overflowed the bar. */
+@media (min-width: 780px) { .brand__txt { display: block; } }
 
 .nav { display: none; align-items: center; gap: 26px; }
 @media (min-width: 1300px) { .nav { display: flex; } }
@@ -435,7 +450,7 @@ main[id],
 /* Mobile drawer */
 .drawer {
   position: fixed;
-  inset: 97px 0 auto;
+  inset: calc(var(--hdr-h) + 1px) 0 auto;
   background: var(--ink);
   border-bottom: 1px solid var(--line);
   padding: 18px var(--gut) 34px;
@@ -445,7 +460,7 @@ main[id],
   transition: opacity 0.3s var(--ease), transform 0.3s var(--ease),
     visibility 0.3s;
   z-index: 99;
-  max-height: calc(100dvh - 97px);
+  max-height: calc(100dvh - var(--hdr-h) - 1px);
   overflow-y: auto;
 }
 .drawer.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
@@ -1230,7 +1245,7 @@ main[id],
   .ftr__grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
   .ftr__grid > div:first-child { grid-column: auto; }
 }
-.ftr__logo { height: 78px; width: auto; margin-bottom: 22px; }
+.ftr__logo { height: 92px; width: auto; margin-bottom: 24px; }  /* ~208px wide */
 .ftr p, .ftr address { color: var(--text-3); font-size: 15px; }
 .ftr h4 {
   font-size: 11px;
@@ -1260,18 +1275,17 @@ main[id],
   max-width: 100%;
   height: auto;
 }
-/* Two lines sit tighter to each other than to the logo above them */
-.ftr__member-txt { display: grid; gap: 4px; }
+/* Set exactly like the business description above: same face, size, weight,
+   tracking, leading and colour, so the two blocks read as one voice. */
+.ftr__member-txt { display: grid; gap: 0; }
 
 .ftr__member span {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: inherit;
   color: var(--text-3);
 }
-/* Leads the pair; the membership line reads as the credential beneath it */
-.ftr__member .ftr__member-lead { color: var(--text-2); }
 
 .ftr__btm {
   margin-top: 52px;
