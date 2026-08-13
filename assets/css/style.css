@@ -522,7 +522,7 @@ main[id],
     background:
       linear-gradient(to left, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.55) 54%),
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../img/atelier.jpg") center 62% / cover no-repeat,
+      url("../img/atelier.jpg") left 62% / cover no-repeat,
       var(--ink);
   }
 }
