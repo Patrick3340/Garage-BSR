@@ -3,6 +3,8 @@
 Site statique (HTML/CSS/JS, aucune dépendance, aucun build).
 Ouvrez **`dashboard.html`** pour le suivi des tâches et les liens vers toutes les pages.
 
+Les rendez-vous se prennent **par téléphone** — il n’y a pas de calendrier en ligne.
+
 ---
 
 ## Structure
@@ -13,18 +15,18 @@ Ouvrez **`dashboard.html`** pour le suivi des tâches et les liens vers toutes l
 
 /fr/index.html           Accueil
 /fr/services.html        Services & réparations
-/fr/rendez-vous.html     Prise de rendez-vous (calendrier)
+/fr/catalogues.html      Catalogues fournisseurs (PDF)
 /fr/contact.html         Contact, carte et formulaire
 
 /en/index.html           Home
 /en/services.html        Services & repairs
-/en/appointment.html     Appointment booking (calendar)
+/en/catalogues.html      Supplier catalogues (PDF)
 /en/contact.html         Contact, map and form
 
 /assets/css/style.css    Système de design complet
 /assets/js/main.js       Menu, accordéon, animations
-/assets/js/booking.js    Intégration du calendrier  ← 1 ligne à configurer
 /assets/img/             Logo et déclinaisons
+/Catalogue/              Catalogues fournisseurs (PDF)
 ```
 
 Chaque page française pointe vers son équivalent anglais (balises `hreflang`),
@@ -34,27 +36,11 @@ donc Google indexe correctement les deux versions.
 
 ## Les 3 choses à changer
 
-### 1. Le calendrier de rendez-vous
+### 1. L’adresse courriel
 
-Ouvrez `assets/js/booking.js` et collez votre lien à la première ligne :
-
-```js
-var BSR_BOOKING_URL = "https://calendly.com/votre-compte/rendez-vous";
-```
-
-Calendly **et** Google Calendar (plages de rendez-vous) sont supportés — le script
-détecte lequel vous utilisez. Le calendrier s’affiche automatiquement aux couleurs
-du logo (fond noir, accents rouges).
-
-Tant que la ligne est vide, la page affiche un encadré « réservation par téléphone ».
-
-### 2. Les coordonnées
-
-Il reste des exemples à remplacer partout (recherche-remplacement dans les 8 pages) :
-
-| À remplacer | Par |
-|---|---|
-| `info@garagebsr.ca` | votre vraie adresse courriel |
+`info@garagebsr.ca` est un exemple. Remplacez-la partout (recherche-remplacement
+dans les 6 pages) : elle apparaît dans la tuile Contact, les deux pieds de page,
+l’action du formulaire et les données structurées.
 
 Déjà exacts partout :
 
@@ -62,10 +48,24 @@ Déjà exacts partout :
   les données structurées Google ;
 - l’adresse **39-A rue Mill, Howick, QC J0S 1G0** ;
 - les heures **lun–ven 8 h–12 h et 13 h–17 h, fermé samedi et dimanche** —
-  affichées sur quatre pages et déclarées à Google (`openingHoursSpecification`).
+  déclarées aussi à Google (`openingHoursSpecification`).
 
 > Le champ « Téléphone » du formulaire de contact affiche `(450) 555-0123` : c’est
 > un simple exemple de format pour le visiteur, pas votre numéro. À laisser tel quel.
+
+### 2. Les catalogues
+
+Les PDF des fournisseurs vivent dans le dossier **`/Catalogue/`** et sont listés
+sur leurs propres pages : `fr/catalogues.html` et `en/catalogues.html`, où pointe
+le menu « Catalogues ».
+
+Pour ajouter un catalogue : déposez le PDF dans `/Catalogue/`, puis copiez un
+bloc `<li>` existant dans les deux pages en changeant le nom de fichier, le
+titre, la langue et le poids. Pour en retirer un, supprimez le `<li>` dans les
+deux pages et le fichier.
+
+⚠️ Les PDF pèsent environ 78 Mo au total. C'est acceptable pour GitHub Pages
+(limite de 1 Go), mais chaque copie du dépôt les télécharge.
 
 ### 3. La liste de services
 

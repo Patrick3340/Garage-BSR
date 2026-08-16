@@ -11,8 +11,10 @@ HTML / CSS / JS uniquement, aucune dépendance, aucune étape de compilation.
 |---|---|---|
 | Accueil | `/fr/` | `/en/` |
 | Services | `/fr/services.html` | `/en/services.html` |
-| Rendez-vous | `/fr/rendez-vous.html` | `/en/appointment.html` |
+| Catalogues | `/fr/catalogues.html` | `/en/catalogues.html` |
 | Contact | `/fr/contact.html` | `/en/contact.html` |
+
+Les PDF des fournisseurs sont dans `/Catalogue/` et listés sur les pages Catalogues.
 
 `/index.html` redirige le visiteur vers sa langue.
 
@@ -20,8 +22,8 @@ HTML / CSS / JS uniquement, aucune dépendance, aucune étape de compilation.
 
 Voir **[LISEZ-MOI.md](LISEZ-MOI.md)** pour :
 
-- brancher le calendrier de rendez-vous (une seule ligne dans `assets/js/booking.js`) ;
-- remplacer les coordonnées encore fictives (courriel, heures) ;
+- remplacer l’adresse courriel encore fictive ;
+- ajouter ou retirer un catalogue PDF ;
 - corriger la liste des services ;
 - la palette et la structure du thème.
 
