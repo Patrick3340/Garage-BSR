@@ -12,3 +12,11 @@ dashboard.html
 .vscode/
 .idea/
 *.swp
+
+# Photos originales de la galerie (85 Mo, sorties directement du téléphone).
+# Le site n'utilise que les versions web de /assets/img/realisations/, qui elles
+# sont versionnées. Les originaux restent sur votre Mac.
+# Pour les publier malgré tout : retirez cette ligne, puis `git add realisations/`.
+# La barre oblique initiale est essentielle : sans elle, le motif attraperait
+# aussi assets/img/realisations/, c'est-à-dire les images du site.
+/realisations/

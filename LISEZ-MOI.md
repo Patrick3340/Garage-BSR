@@ -15,17 +15,20 @@ Les rendez-vous se prennent **par téléphone** — il n’y a pas de calendrier
 
 /fr/index.html           Accueil
 /fr/services.html        Services & réparations
+/fr/realisations.html    Galerie photo des travaux
 /fr/catalogues.html      Catalogues fournisseurs (PDF)
 /fr/contact.html         Contact, carte et formulaire
 
 /en/index.html           Home
 /en/services.html        Services & repairs
+/en/our-work.html        Photo gallery of past work
 /en/catalogues.html      Supplier catalogues (PDF)
 /en/contact.html         Contact, map and form
 
 /assets/css/style.css    Système de design complet
 /assets/js/main.js       Menu, accordéon, animations
 /assets/img/             Logo et déclinaisons
+/assets/img/realisations/ Photos de la galerie (+ full/)
 /Catalogue/              Catalogues fournisseurs (PDF)
 ```
 
@@ -75,6 +78,25 @@ ne faites pas, ajoutez vos spécialités.
 
 ⚠️ La catégorie **10 — Inspections** mentionne l’inspection mandatée par la SAAQ,
 qui exige une accréditation. Retirez cette ligne si le garage n’est pas mandataire.
+
+---
+
+### 4. La galerie de réalisations
+
+`fr/realisations.html` et `en/our-work.html` affichent 17 photos tirées du dossier
+`/realisations/`. Les versions web vivent dans `/assets/img/realisations/`
+(vignettes, 1100 px) et `/assets/img/realisations/full/` (agrandissements, 1800 px).
+
+Les tuiles sont carrées et les photos sont cadrées par le navigateur, ce qui donne
+des vignettes toutes identiques même si les originaux sont tantôt en hauteur,
+tantôt en largeur. Pour ajouter une photo : générez les deux tailles, nommez-les
+`realisation-18.jpg`, déposez-les dans les deux dossiers, puis copiez un bloc
+`<li>` existant dans les deux pages.
+
+⚠️ La photo `IMG_1510.PNG` du dossier source n'a pas été retenue : c'est une
+capture d'écran prise dans l'éditeur de recadrage de l'iPhone (le bouton
+« Crop » et la barre du bas font partie de l'image) et sa résolution est bien
+inférieure à celle des autres. Fournissez la photo d'origine pour l'ajouter.
 
 ---
 
