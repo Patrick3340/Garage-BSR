@@ -41,7 +41,7 @@ donc Google indexe correctement les deux versions.
 
 ### 1. L’adresse courriel
 
-`info@garagebsr.ca` est un exemple. Remplacez-la partout (recherche-remplacement
+`info@garagebsrinc.ca` est un exemple. Remplacez-la partout (recherche-remplacement
 dans les 6 pages) : elle apparaît dans la tuile Contact, les deux pieds de page,
 l’action du formulaire et les données structurées.
 
@@ -118,7 +118,7 @@ Le dossier est prêt à publier tel quel.
 
 1. **Netlify Drop** — allez sur `app.netlify.com/drop`, glissez le dossier, c’est en ligne. Gratuit, HTTPS inclus.
 2. **GitHub Pages** ou **Vercel** — même principe si vous préférez.
-3. Ensuite, pointez votre domaine (p. ex. `garagebsr.ca`) vers l’hébergeur.
+3. Ensuite, pointez votre domaine (p. ex. `garagebsrinc.ca`) vers l’hébergeur.
 
 Supprimez `dashboard.html`, `LISEZ-MOI.md` et `BSR-logo.png` du dossier publié si
 vous ne voulez pas qu’ils soient accessibles publiquement.
