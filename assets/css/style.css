@@ -486,18 +486,23 @@ a[href^="tel:"] { white-space: nowrap; }
    ========================================================================== */
 .hero {
   position: relative;
-  padding: clamp(66px, 10vw, 120px) 0 clamp(56px, 8vw, 104px);
+  /* Top padding is what holds the copy clear of the sign band above it. */
+  padding: clamp(116px, 13vw, 132px) 0 clamp(56px, 8vw, 104px);
   overflow: hidden;
-  /* The shop itself, at 50% over the black ground. Photo sits centre-right so
-     the building fills the copy side; the flat 50% layer is what dims it. */
-  background:
-    /* legibility scrim over the copy — stacked layout puts it up top */
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 62%,
-      rgba(0, 0, 0, 0) 88%),
-    /* the photo, at 50% */
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/atelier.jpg") center 85% / cover no-repeat,
-    var(--ink);
+  /* PHONE / TABLET — the copy runs the full width here, so the sign cannot be
+     cleared sideways; it is given a band of its own along the top instead, and
+     the photo is faded to black behind the copy below it.
+     The sky is already cropped out of atelier.jpg itself, so the photo needs no
+     negative offset here — the sign sits near its top edge by construction. */
+  background-color: var(--ink);
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 20%, rgba(0, 0, 0, 0.70) 44%,
+      rgba(0, 0, 0, 0.94) 60%, var(--ink) 74%),
+    url("../img/atelier.jpg");
+  background-size: 100% 100%, 118% auto;
+  background-position: 0 0, 50% 0;
   border-bottom: 1px solid var(--line-soft);
 }
 /* The shop photograph replaced the drawn arc in the hero — one focal
@@ -521,13 +526,25 @@ a[href^="tel:"] { white-space: nowrap; }
   .hero__grid { grid-template-columns: 1.12fr 0.88fr; }
   /* Copy takes the left track; the photograph carries the right one. */
   .hero__copy { grid-column: 1; }
-    /* copy is on the left, so the scrim runs that way */
+  /* DESKTOP / LARGE TABLET — only 115%, so the whole scene stays in frame:
+     the sign on the gable, the pickup, and the display window on the right.
+     Anchored to the right edge so the window is never the thing that falls off,
+     and pulled up 14vw so the sign clears the headline and the sky is gone. */
   .hero {
-    background:
-      linear-gradient(to left, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.55) 54%),
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../img/atelier.jpg") left 100% / cover no-repeat,
-      var(--ink);
+    background-image:
+      linear-gradient(to left, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0.58) 56%,
+        rgba(0, 0, 0, 0.74) 100%),
+      linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)),
+      url("../img/atelier.jpg");
+    /* Zoom pinned to a pixel floor, not a percentage: past ~1700px the photo
+       stops growing with the viewport, so the sign, the pickup and the display
+       window all stay in frame rather than the crop tightening as the screen
+       widens. Nudged right of centre so the window survives at narrow desktop
+       widths, and up 62px so the sign clears the headline. */
+    background-size: 100% 100%, 100% 100%, max(100%, 1760px) auto;
+    background-position: 0 0, 0 0, 66% -60px;
+    /* Extra head-room so the copy starts below the sign band, not across it. */
+    padding-top: 152px;
   }
 }
 
@@ -563,13 +580,8 @@ a[href^="tel:"] { white-space: nowrap; }
 }
 .chip .dot { display: none; }
 
-/* The photo is 1.88:1, almost the hero's own shape, so `cover` leaves barely
-   any vertical room to reposition. From 1300px up the hero is comfortably
-   wider than the photo, so a 6% width zoom is safe and buys ~120px of travel
-   to lift the building and sign clear of the sky. */
-@media (min-width: 1300px) {
-  .hero { background-size: auto, auto, 106% auto; }
-}
+/* The 150%/-16vw pair above already covers every desktop width, so the old
+   1300px zoom step is gone: it fought the new offset instead of helping it. */
 
 /* ==========================================================================
    Marquee strip (logo-style red band)
