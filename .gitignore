@@ -20,3 +20,9 @@ dashboard.html
 # La barre oblique initiale est essentielle : sans elle, le motif attraperait
 # aussi assets/img/realisations/, c'est-à-dire les images du site.
 /realisations/
+
+# Fichiers de travail temporaires (sondes de rendu, captures)
+_probe.*
+_debug.html
+_shot.html
+_vw.html
