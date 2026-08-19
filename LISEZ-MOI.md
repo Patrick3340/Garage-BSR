@@ -10,14 +10,13 @@ Les rendez-vous se prennent **par téléphone** — il n’y a pas de calendrier
 ## Structure
 
 ```
-/index.html              Sélecteur de langue (redirige selon le navigateur)
 /dashboard.html          Tableau de bord des tâches (interne, à ne pas publier)
 
-/fr/index.html           Accueil
-/fr/services.html        Services & réparations
-/fr/realisations.html    Galerie photo des travaux
-/fr/catalogues.html      Catalogues fournisseurs (PDF)
-/fr/contact.html         Contact, carte et formulaire
+/index.html              Accueil (français — c'est la page d'accueil du site)
+/services.html           Services & réparations
+/realisations.html       Galerie photo des travaux
+/catalogues.html         Catalogues fournisseurs (PDF)
+/contact.html            Contact, carte et formulaire
 
 /en/index.html           Home
 /en/services.html        Services & repairs
@@ -32,6 +31,7 @@ Les rendez-vous se prennent **par téléphone** — il n’y a pas de calendrier
 /Catalogue/              Catalogues fournisseurs (PDF)
 ```
 
+Le français est servi à la racine du domaine, l’anglais sous `/en/`.
 Chaque page française pointe vers son équivalent anglais (balises `hreflang`),
 donc Google indexe correctement les deux versions.
 
@@ -59,7 +59,7 @@ Déjà exacts partout :
 ### 2. Les catalogues
 
 Les PDF des fournisseurs vivent dans le dossier **`/Catalogue/`** et sont listés
-sur leurs propres pages : `fr/catalogues.html` et `en/catalogues.html`, où pointe
+sur leurs propres pages : `catalogues.html` et `en/catalogues.html`, où pointe
 le menu « Catalogues ».
 
 Pour ajouter un catalogue : déposez le PDF dans `/Catalogue/`, puis copiez un
@@ -72,7 +72,7 @@ deux pages et le fichier.
 
 ### 3. La liste de services
 
-`fr/services.html` et `en/services.html` contiennent 12 catégories correspondant à
+`services.html` et `en/services.html` contiennent 12 catégories correspondant à
 ce qu’un garage de mécanique générale offre couramment au Québec. Retirez ce que vous
 ne faites pas, ajoutez vos spécialités.
 
@@ -83,7 +83,7 @@ qui exige une accréditation. Retirez cette ligne si le garage n’est pas manda
 
 ### 4. La galerie de réalisations
 
-`fr/realisations.html` et `en/our-work.html` affichent 17 photos tirées du dossier
+`realisations.html` et `en/our-work.html` affichent 17 photos tirées du dossier
 `/realisations/`. Les versions web vivent dans `/assets/img/realisations/`
 (vignettes, 1100 px) et `/assets/img/realisations/full/` (agrandissements, 1800 px).
 

@@ -9,11 +9,11 @@ HTML / CSS / JS uniquement, aucune dépendance, aucune étape de compilation.
 
 | Page | Français | English |
 |---|---|---|
-| Accueil | `/fr/` | `/en/` |
-| Services | `/fr/services.html` | `/en/services.html` |
-| Réalisations | `/fr/realisations.html` | `/en/our-work.html` |
-| Catalogues | `/fr/catalogues.html` | `/en/catalogues.html` |
-| Contact | `/fr/contact.html` | `/en/contact.html` |
+| Accueil | `/` | `/en/` |
+| Services | `/services.html` | `/en/services.html` |
+| Réalisations | `/realisations.html` | `/en/our-work.html` |
+| Catalogues | `/catalogues.html` | `/en/catalogues.html` |
+| Contact | `/contact.html` | `/en/contact.html` |
 
 Les PDF des fournisseurs sont dans `/Catalogue/` et listés sur les pages Catalogues.
 
