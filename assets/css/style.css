@@ -1592,19 +1592,34 @@ a[href^="tel:"] { white-space: nowrap; }
   color: var(--text-3);
 }
 
+/* Policies left, social icons centred, copyright right.
+   Grid rather than flex with space-between: with three items of unequal width,
+   space-between leaves the middle one off-centre. `1fr auto 1fr` pins the icons
+   to the true centre of the bar no matter how wide the outer two grow. */
 .ftr__btm {
   margin-top: 52px;
   padding-top: 26px;
   border-top: 1px solid var(--line-soft);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 12px 24px;
-  justify-content: space-between;
   align-items: center;
   font-size: 13px;
   color: var(--text-3);
 }
+.ftr__btm > :nth-child(1) { justify-self: start; }
+.ftr__btm > :nth-child(2) { justify-self: center; }
+.ftr__btm > :nth-child(3) { justify-self: end; text-align: right; }
 .ftr__btm a:hover { color: var(--red); }
+
+/* Below this the three groups no longer fit side by side, so they stack and
+   all align left. Same specificity as the rules above — source order wins. */
+@media (max-width: 900px) {
+  .ftr__btm { grid-template-columns: 1fr; }
+  .ftr__btm > :nth-child(1),
+  .ftr__btm > :nth-child(2),
+  .ftr__btm > :nth-child(3) { justify-self: start; text-align: left; }
+}
 
 /* ==========================================================================
    Long-form legal prose
