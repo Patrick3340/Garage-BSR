@@ -500,9 +500,14 @@ a[href^="tel:"] { white-space: nowrap; }
     linear-gradient(to bottom,
       rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 20%, rgba(0, 0, 0, 0.70) 44%,
       rgba(0, 0, 0, 0.94) 60%, var(--ink) 74%),
+    /* Same flat 26% dim the desktop stack uses. Without it the photo rendered
+       about 2.5x brighter here than on a wide screen — the band at the top sits
+       under the transparent end of the gradient above, so nothing was dimming
+       it at all. This layer is what keeps the two formats consistent. */
+    linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)),
     url("../img/atelier.jpg");
-  background-size: 100% 100%, 118% auto;
-  background-position: 0 0, 50% 0;
+  background-size: 100% 100%, 100% 100%, 118% auto;
+  background-position: 0 0, 0 0, 50% 0;
   border-bottom: 1px solid var(--line-soft);
 }
 /* The shop photograph replaced the drawn arc in the hero — one focal
